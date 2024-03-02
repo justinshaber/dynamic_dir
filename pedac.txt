@@ -1,0 +1,18 @@
+Problem Overview -
+
+  The goal is to create a new Sinatra application that satisfies these requirements using what we've covered so far in this course.
+
+  Requirements
+    1. When a user visits the root path, /, they should be presented with a listing of all of the files in the public directory. The listing for a file should only display the file's name -- don't display the name of the directory that contains those files. For example, if public contains a file named whodat.doc, then the app should only display whodat.doc; it should not display any path information such as public/whodat.doc or /Users/xyzzy/project/public/whodat.doc.
+
+    2. When a user clicks one of the filenames in the list, they should be taken directly to that file. Take advantage of Sinatra's built-in serving of the public directory.
+
+    3. Create at least 5 files in the public directory to test the listing page.
+
+    4. Add a parameter that controls the sort order of the files on the page. They should be sorted in an ascending (A-Z) order by default, or descending (Z-A) if the parameter has a certain value.
+
+    5. Display a link to reverse the order. The text of the link should reflect the order that will be displayed if it is clicked: "Sort ascending" or "Sort descending".
+
+Problem 1 - setting up a sinatra application
+
+  Because sinatra is an all-inclusive dsl, we don't need to explicitly install Rack. Rack is an included dependency and adheres to Rack specifications under the hood.
