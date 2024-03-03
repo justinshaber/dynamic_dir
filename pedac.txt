@@ -16,3 +16,8 @@ Problem Overview -
 Problem 1 - setting up a sinatra application
 
   Because sinatra is an all-inclusive dsl, we don't need to explicitly install Rack. Rack is an included dependency and adheres to Rack specifications under the hood.
+
+Problem 2 - 
+    2. When a user clicks one of the filenames in the list, they should be taken directly to that file. Take advantage of Sinatra's built-in serving of the public directory.
+
+    when they click, a request is sent for ...something.
