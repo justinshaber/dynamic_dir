@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+      <div id="menu">
+        <div class="pure-menu">
+          <a class="pure-menu-heading" href="/">The Boys</a>
+
+          <ul class="pure-menu-list">
+            <% @file_names.each do |file_name| %>
+              <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link"><%=file_name%></a>
+              </li>
+            <% end %>
+          </ul>
+      </div>
+    </div>
+  </body>
+</html>
