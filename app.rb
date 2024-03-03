@@ -4,14 +4,7 @@ require 'sinatra/reloader' # causes app to reload its files every time a page is
 
 get '/' do
   @file_names = Dir.children("public").sort
-  @sort = { :path => '/descending', :order => 'Z-A' }
-
-  erb :home
-end
-
-get '/descending' do
-  @file_names = Dir.children("public").sort.reverse
-  @sort = { :path => '/', :order => 'A-Z' }
+  @file_names.reverse! if params[:sort] == 'desc'
 
   erb :home
 end

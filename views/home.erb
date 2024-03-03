@@ -17,6 +17,12 @@
           </ul>
       </div>
     </div>
-    <a href='<%= @sort[:path] %>'>Sort <%=@sort[:order]%></a>
+    <p>
+      <% if params[:sort] == "desc" %>
+        <a href='/'>Sort A-Z</a>
+      <% else %>
+        <a href='/?sort=desc'>Sort Z-A</a>
+      <%end%>
+    </p>
   </body>
 </html>
